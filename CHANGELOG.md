@@ -1,10 +1,4 @@
-﻿---
-description: "Documentation for rpg-lore-weaver: changelog."
-metadata:
-  tags: [rpg-lore-weaver, changelog]
----
-
-# Changelog
+﻿# Changelog
 
 All notable changes to the `rpg-lore-weaver` skill.
 

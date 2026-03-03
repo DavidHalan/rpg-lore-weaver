@@ -20,7 +20,7 @@ metadata:
 
 > "Você é o resultado da sua história. Cada evento, cada reação, cada decisão molda quem você se torna."
 
-A diferença entre um personagem raso e um memorável está nos **detalhes** — detalhes que envolvem história.
+A diferença entre um personagem raso e um memorável está nos **detalhes** que envolvem história.
 
 ---
 
