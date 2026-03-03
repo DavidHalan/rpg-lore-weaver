@@ -20,7 +20,7 @@ metadata:
 
 > "You are the result of your story. Every event, every reaction, every decision shapes who you become."
 
-The difference between a flat character and a memorable one is in the **details** — details that involve history.
+The difference between a flat character and a memorable one is in the **details** that involve history.
 
 ---
 
