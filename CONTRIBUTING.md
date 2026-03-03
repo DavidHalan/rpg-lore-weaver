@@ -1,9 +1,3 @@
----
-description: "Contribution guide for rpg-lore-weaver."
-metadata:
-  tags: [rpg-lore-weaver, contributing]
----
-
 # Contributing to rpg-lore-weaver
 
 Thank you for your interest in improving this skill! Here's how to contribute effectively.
@@ -52,14 +46,20 @@ refactor(scripts): remove obsolete normalize_library.py calls
 
 ```
 rpg-lore-weaver/
+├── .agent/workflows/     ← Agent workflows (character, NPC, party, villain)
+├── .github/workflows/    ← CI/CD (quality gate)
 ├── SKILL.md              ← Main AI instructions (≤500 lines!)
 ├── references/           ← Knowledge base loaded on demand
-│   └── villain-mode.md   ← Dedicated villain/antagonist workflow
-├── systems/              ← RPG system rules with Backstory by Class + Mechanical Suggestions
-├── examples/             ← Complete character samples
+│   ├── villain-mode.md   ← Villain/antagonist workflow
+│   ├── npc-quick-mode.md ← NPC Quick Mode workflow
+│   └── party-creation-mode.md ← Party creation workflow
+├── systems/              ← RPG system rules (D&D 5e, PF2e, CoC, Tormenta20, etc.)
+├── examples/             ← Complete character, NPC and villain samples
 ├── scripts/              ← Python utilities and tests
 ├── docs/                 ← Architecture and technical docs
 ├── CHANGELOG.md          ← Release history
+├── CONTRIBUTING.md       ← This file
+├── LICENSE               ← MIT License
 ├── README.md             ← English documentation
 └── README.pt-BR.md       ← Portuguese documentation
 ```
@@ -71,7 +71,7 @@ rpg-lore-weaver/
 ### Checklist
 
 - [ ] **SKILL.md ≤ 500 lines** — Run: `(Get-Content SKILL.md | Measure-Object -Line).Lines`
-- [ ] **Tests pass** — Run: `python -m unittest scripts/test_lib_utils.py scripts/test_character_tools.py -v`
+- [ ] **Tests pass** — Run: `python -m unittest scripts/test_lib_utils.py scripts/test_character_tools.py scripts/test_compile_skill.py -v`
 - [ ] **Examples validate** — Run: `python scripts/validate_character_output.py examples/<file>.md`
 - [ ] **Manual compiles** — Run: `python scripts/compile_skill.py`
 - [ ] **Quality gate passes** — Run: `python scripts/quality_gate.py`
@@ -104,12 +104,13 @@ python scripts/quality_gate.py
 4. Consider adding a sample character in `examples/`
 5. Add system-specific prompts to `references/system-prompts.md`
 
-### New Entity Mode (Villain, Faction, etc.)
+### New Entity Mode (Villain, NPC, Party, etc.)
 
 1. Create `references/your-mode.md` following `villain-mode.md` as template
 2. Add entry to `references/resource-index.md`
 3. Add routing in SKILL.md Discovery Step 0 (keep SKILL.md under 500 lines!)
-4. Run quality gate
+4. Create a workflow in `.agent/workflows/` (follow existing ones as template)
+5. Run quality gate
 
 ### New Example Character
 
