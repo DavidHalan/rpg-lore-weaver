@@ -1,9 +1,3 @@
----
-description: "Documentation for rpg-lore-weaver: readme.pt-br."
-metadata:
-  tags: [rpg-lore-weaver, readme-pt-br]
----
-
 # 🎲 rpg-lore-weaver
 
 > _Uma skill interativa de IA que ajuda você a criar backstories profundas, motivações complexas e ganchos dramáticos para personagens de RPG de mesa._
